@@ -11,11 +11,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class CustomAdapter extends RecyclerView.Adapter {
 
+public class CustomAdapter extends RecyclerView.Adapter {
 
     private ArrayList<DataModel> dataSet;
     Context context;
+
+    public int[] configuration = new int[]{1,0,1,0,0,0,1,0 };
 
     public static class SectionHeaderViewHolder extends RecyclerView.ViewHolder {
         TextView sectionHeader;
@@ -45,18 +47,7 @@ public class CustomAdapter extends RecyclerView.Adapter {
     @Override
     public int getItemViewType(int position) {
 
-        switch (position){
-            case 0: return 1;
-            case 1: return 0;
-            case 2: return 0;
-            case 3: return 0;
-            case 4: return 1;
-            case 5: return 0;
-            case 6: return 0;
-            case 7: return 1;
-            case 8: return 0;
-            default: return -1;
-        }
+        return configuration[position];
     }
 
 

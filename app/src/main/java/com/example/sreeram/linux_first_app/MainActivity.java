@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private static ArrayList<DataModel> data;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
